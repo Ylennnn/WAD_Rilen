@@ -1,1 +1,1 @@
-hello
+let score = 0;
