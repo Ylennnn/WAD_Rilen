@@ -1,37 +1,23 @@
-let score = 0;
+console.log ("Connected!");
 
-const display = document.querySelector("#val");
-const msg = document.querySelector("#msg");
+const profileContainer = document.getElementById("profile-container");
 
-const addBtn = document.querySelector("#add_btn");
-const subtractBtn = document.querySelector("#subtract_btn");
-const resetBtn = document.querySelector("#reset_btn");
+const profileCard = document.createElement("div");
+profileCard.classList.add("profile-card");
 
-function checkConditions() {
-    if (score >= 10) {
-        msg.innerText = "Message: Outstanding performance!";
-    }
+const name = document.createElement("h2");
+name.textContent = "RIlen Nicole H. Agustin";
 
-    else if (score < 0) {
-        msg.innerText = "Message: Below expectations!";
-    }
+const bio = document.createElement("p");
+bio.textContent = "I am a BSIS student who enjoy learning new things.";
 
-    else {
-        msg.innerText = 'Message: "Keep going to raise your score!"';
-    }
-}
-addBtn.addEventListener("click", () => {
-    score++;
-    display.innerText = "Current Score: " + score;
-    checkConditions();
-});
-subtractBtn.addEventListener("click", () => {
-    score--;
-    display.innerText = "Current Score: " + score;
-    checkConditions();
-});
-resetBtn.addEventListener("click", () => {
-    score = 0;
-    display.innerText = "Current Score: " + score;
-    msg.innerText = 'Message: "Keep going to raise your score!"';
-});
+const avatar = document.createElement("img");
+avatar.src = "avatar.png";
+avatar.alt = "My Avatar";
+avatar.classList.add("avatar");
+
+profileCard.appendChild(avatar);
+profileCard.appendChild(name);
+profileCard.appendChild(bio);
+
+profileContainer.appendChild(profileCard);

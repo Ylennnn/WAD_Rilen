@@ -1,0 +1,32 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.profile-card {
+    background-color: white;
+    width: 300px;
+    padding: 25px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-card h2 {
+    margin-top: 15px;
+}
+
+.profile-card p {
+    color: #555;
+    line-height: 1.5;
+}
