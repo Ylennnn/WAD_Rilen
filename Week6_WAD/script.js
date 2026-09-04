@@ -30,6 +30,15 @@ themeButton.addEventListener("click", () => {
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
-    welcomeMessage.textContent = "";
+   
+    nameInput.value = "";
+    courseInput.value = "";
+
+   
+    welcomeMessage.textContent = "Welcome!";
+    registrationOutput.textContent = "";
+
+   
+    document.body.classList.remove("dark");
   }
 });
